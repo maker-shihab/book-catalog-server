@@ -27,7 +27,7 @@ body {
 	font-family: "SegoeUIRegular";
 	margin: 0;
 	font-weight: 400;
-	font-size: calc(16px + 0.5vw);
+	font-size: calc(20px + 0.4vw);
 	line-height: 1.3;
 }
 
