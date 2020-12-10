@@ -150,7 +150,7 @@ button:focus {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	width: 170px;
+	width: 160px;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
@@ -174,7 +174,7 @@ button:focus {
 	-ms-flex-order: 1;
 	order: 1;
 	position: absolute;
-	width: 140px;
+	width: 130px;
 	text-align: right;
 	top: 29px;
 	left: 0;
@@ -193,6 +193,7 @@ button:focus {
 	-webkit-box-ordinal-group: 1;
 	-ms-flex-order: 0;
 	order: 0;
+	font-weight: 700;
 	border: 2px solid #0071bc;
 }
 
@@ -456,7 +457,7 @@ button:focus {
 .feature_title h2 {
 	text-align: center;
 	padding-top: 55px;
-	font-size: 1.2em;
+	font-size: 1em;
 	color: #090909;
 	font-weight: 700;
 	font-family: "Segoe UI";
