@@ -31,6 +31,14 @@ Keywords: html,css,js,Bootstrap 5
     .features_item:not(:last-child)::after {
         display: none;
     }
+
+    .features_item_text p {
+        font-size: .7em;
+    }
+
+    .feature_title h2 {
+        text-align: right;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -87,8 +95,22 @@ Keywords: html,css,js,Bootstrap 5
     }
 
     .form_text p {
-        padding-top: 10px;
         color: #2386c9;
+        font-size: .7em;
+    }
+
+    .select-box .options-container {
+        top: 25px;
+        font-size: .7em;
+    }
+
+    .selected {
+        font-size: 0.7em;
+        margin-top: -5px;
+    }
+
+    .features_item_text h3 {
+        font-size: .8em;
     }
 
 }
@@ -97,6 +119,12 @@ Keywords: html,css,js,Bootstrap 5
     .search_sugtion {
         right: -0px;
     }
+
+    .feature_title h2 {
+        text-align: center;
+    }
+
+
 }
 
 @media (max-width: 419.98px) {
@@ -115,5 +143,9 @@ Keywords: html,css,js,Bootstrap 5
         -ms-flex-direction: column;
         flex-direction: column;
         row-gap: 20px;
+    }
+
+    .select-box .options-container {
+        font-size: .68em;
     }
 }
