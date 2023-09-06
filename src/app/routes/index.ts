@@ -1,20 +1,24 @@
-import { Router } from "express";
-import { BookRouter } from "../modules/books/book.route";
-import { UserRouter } from "../modules/users/user.route";
+import express from 'express';
+import { BookRoutes } from '../modules/book/book.route';
+import { UserRoutes } from '../modules/user/user.route';
+import { WishListRoutes } from '../modules/wishlist/wishlist.route';
 
-const router = Router();
+const router = express.Router();
 
-const moduleRoute = [
+const moduleRoutes = [
   {
-    path: "/books",
-    route: BookRouter,
+    path: '/user',
+    route: UserRoutes,
   },
   {
-    path: "/users",
-    route: UserRouter,
+    path: '/book',
+    route: BookRoutes,
+  },
+  {
+    path: '/wishlist',
+    route: WishListRoutes,
   },
 ];
 
-moduleRoute.forEach((route) => router.use(route.path, route.route));
-
+moduleRoutes.forEach(route => router.use(route.path, route.route));
 export default router;

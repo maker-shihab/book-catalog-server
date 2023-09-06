@@ -1,22 +1,22 @@
-import { Response } from "express";
+import { Response } from 'express';
 
-type IApiResponse<T> = {
+type IApiReponse<T> = {
   statusCode: number;
-  success: string;
+  success: boolean;
   message?: string | null;
   meta?: {
     page: number;
     limit: number;
-    totall: number;
+    total: number;
   };
   data?: T | null;
 };
 
-const sendResponse = <T>(res: Response, data: IApiResponse<T>): void => {
-  const responseData: IApiResponse<T> = {
+const sendResponse = <T>(res: Response, data: IApiReponse<T>): void => {
+  const responseData: IApiReponse<T> = {
     statusCode: data.statusCode,
     success: data.success,
-    message: data.message,
+    message: data.message || null,
     meta: data.meta || null || undefined,
     data: data.data || null || undefined,
   };
