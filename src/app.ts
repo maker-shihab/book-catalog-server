@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/v1', routes);
 app.get('/', (req, res) => {
-  res.json('Book Catalog Server Working!!');
+  res.json('Book Catalog Server Operation Successful!!');
 });
 
 //global error handler

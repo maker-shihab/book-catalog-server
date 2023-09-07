@@ -1,11 +1,12 @@
+/* eslint-disable no-console */
 import { Server } from 'http';
 import mongoose from 'mongoose';
 import app from './app';
 import config from './config/index';
 
 process.on('uncaughtException', error => {
-  console.log(error);
-  process.exit(1);
+  // Log the error, but don't exit the process in production
+  console.error('Uncaught Exception:', error);
 });
 
 let server: Server;
@@ -19,16 +20,17 @@ async function bootstrap() {
       console.log(`Application  listening on port ${config.port}`);
     });
   } catch (err) {
-    console.log('Failed to connect database', err);
+    console.error('Failed to connect to the database:', err);
   }
 
   process.on('unhandledRejection', error => {
     if (server) {
       server.close(() => {
-        console.log(error);
+        console.error('Unhandled Rejection:', error);
         process.exit(1);
       });
     } else {
+      console.error('Unhandled Rejection:', error);
       process.exit(1);
     }
   });
